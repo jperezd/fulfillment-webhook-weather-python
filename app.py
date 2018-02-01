@@ -108,7 +108,7 @@ def makeWebhookResult(data):
         "speech": speech,
         "displayText": speech,
         #"data": {"telegram": {"El tiempo hoy en " + location.get('city')}},
-        "data": "This text *was* sent in the data field.",
+        "speech": "This text *was* sent in the data field.",
         # "data": telegram,
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
