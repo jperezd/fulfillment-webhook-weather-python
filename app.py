@@ -60,6 +60,9 @@ def processRequest(req):
     result = urlopen(yql_url).read()
     data = json.loads(result)
     res = makeWebhookResult(data)
+   
+print (result)
+print (res)
     return res
 
 
@@ -105,10 +108,11 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
+       "platform": telegram,
         "speech": speech,
         "displayText": speech,
      
-         "data": telegram,
+         
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
